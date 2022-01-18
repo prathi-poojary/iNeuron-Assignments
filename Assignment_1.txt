@@ -1,0 +1,78 @@
+1. In the below elements which of them are values or an expression? eg:- values can be integer or string and expressions will be mathematical operators.
+* 
+'hello'
+-87.8
+- 
+/ 
+
++
+6 
+
+Ans:-
+* - expression
+'hello' -  value
+-87.8 -  value
+-  - expression
+/  - expression
++  - expression
+6 - value
+
+
+2. What is the difference between string and variable?
+Ans:-
+    A variable is basically the name of the location in the primary memory of your computer. This can be chosen by you. A variable can store everything from strings to numbers.
+
+A string is the values inside the quotes assigned to a string.
+
+A variable can hold a string, but a string can't hold a variable
+
+
+3. Describe three different data types.
+Ans:-
+    Data Type                 Used for                      Example
+    String                  Alphanumeric characters        hello world, Alice, Bob123
+    Integer                 Whole numbers                  7, 12, 999
+    Float (floating point)  Number with a decimal point    3.15, 9.06, 00.13
+    
+    
+4. What is an expression made up of? What do all expressions do?
+Ans:-
+    An expression is a combination of operators and operands that is interpreted to produce some other value. In any programming language, an expression is evaluated as per the precedence of its operators.
+    So that if there is more than one operator in an expression, their precedence decides which operation will be performed first. 
+    
+5. This assignment statements, like spam = 10. What is the difference between an expression and a statement?
+Ans:-
+    An Expression is a sequence or combination of values, variables, operators and function calls that always produces or returns a result value.
+     A Statement is the smallest executable unit of code that has an effect, like creating a variable or displaying a value.
+     
+6. After running the following code, what does the variable bacon contain?
+bacon = 22
+bacon + 1
+Ans:-
+    bacon = 22
+    bacon + 1
+     output->   23
+
+7. What should the values of the following two terms be?
+'spam' + 'spamspam'
+'spam' * 3
+Ans:-
+     'spam' + 'spamspam'
+      output-> 'spamspamspam'
+     
+     'spam' * 3
+      output-> 'spamspamspam'  
+      
+8. Why is eggs a valid variable name while 100 is invalid?
+Ans:-
+    because we can't give a variable name as an integer. if we, we should begin with a string-like alphabet name then integer. e100 or eggs100 is valid
+    
+9. What three functions can be used to get the integer, floating-point number, or string version of a value?
+Ans:-
+    str(), int(), float()
+    
+10. Why does this expression cause an error? How can you fix it?
+'I have eaten ' + 99 + ' burritos.'
+Ans:-
+     because 99 is an integer it cannot be concatenated with strings, if we have to concatenate it we need to do typecasting.
+    
