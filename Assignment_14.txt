@@ -1,0 +1,56 @@
+1. What does RGBA stand for?
+Ans:-
+    RGBA(Red-Green-Blue-Alpha)
+    
+
+2. From the Pillow module, how do you get the RGBA value of any images?
+Ans:-
+    Use PIL. Image. Image. getpixel() to return the RGB values of a pixel
+
+    filename = "sample.jpg"
+    img = Image. open(filename)
+    img. show() 
+    colors = img. getpixel((320,240)) Get the RGB values at coordinate x = 320, y = 240.
+    print(colors)
+    
+    
+3. What is a box tuple, and how does it work?
+Ans:-
+    The box tuple submodule provides read-only access for the tuple userdata type. 
+    
+    It allows, for a single tuple: selective retrieval of the field contents, retrieval of 
+    information about size, iteration over all the fields, and conversion to a Lua table.
+    
+    
+4. Use your image and load in notebook then, How can you find out the width and height of an Image object?
+Ans:-
+    from IPython.display import Image
+    image = PIL.Image.open("sample.png")
+    width, height = image.size
+    print(width, height)
+    
+
+5. What method would you call to get Image object for a 100×100 image, excluding the lower-left quarter of it?
+Ans:-
+     resize() method.
+
+
+6. After making changes to an Image object, how could you save it as an image file?
+Ans:-
+    Python PIL  Image.save() method
+    
+    from PIL import Image 
+    import PIL 
+  
+    im1 = Image.open(r"C:\Users\System-Pc\Desktop\flower1.jpg") 
+    im1 = im1.save("geeks.jpg")
+
+
+7. What module contains Pillow’s shape-drawing code?
+Ans:-
+    ImageDraw module of the Python image processing library Pillow (PIL) provides many methods for drawing figures, such as circles, squares, and straight lines.
+
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind of object?
+Ans:-
+    The ImageDraw module provides simple 2D graphics for Image objects. You can use this module to create new images, annotate or retouch existing images, and to generate graphics on the fly for web use.
