@@ -1,0 +1,231 @@
+1.Write a Python Program to find sum of elements in a list ?
+Ans:
+def sumofList():
+    in_ele = int(input('Enter the No of Entries in a List: '))
+    in_list = []
+    for itr in range(in_ele):
+        in_list.append(int(input('Enter a element: ')))
+    print(f'Sum of Elements: {sum(in_list)}')
+
+sumofList()
+Enter the No of Entries in a List: 5
+Enter a element: 1
+Enter a element: 2
+Enter a element: 3
+Enter a element: 4
+Enter a element: 5
+Sum of Elements: 15
+
+
+2.Write a Python Program to multiply all numbers in the list ?
+Ans:
+def mulofList():
+    in_ele = int(input('Enter the No of Entries in a List: '))
+    in_list = []
+    mul = 1
+    for itr in range(in_ele):
+        in_list.append(int(input('Enter a element: ')))
+    for ele in in_list:
+        mul = mul * ele
+    print(mul)
+
+mulofList()
+Enter the No of Entries in a List: 5
+Enter a element: 1
+Enter a element: 2
+Enter a element: 3
+Enter a element: 4
+Enter a element: 5
+120
+
+
+3.Write a Python Program to find smallest number in the list ?
+Ans:
+def smallEleInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    print(f'The Smallest Element in {in_list} is {sorted(in_list)[0]}')
+smallEleInList()
+Enter the No of elements in a list: 5
+Enter a Element: 34
+Enter a Element: 56
+Enter a Element: 67
+Enter a Element: 87
+Enter a Element: 12
+The Smallest Element in [34, 56, 67, 87, 12] is 12
+
+
+4.Write a Python Program to find largest number in the list ?
+Ans:
+def largestEleInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    print(f'The Largest Element in {in_list} is {sorted(in_list, reverse=True)[0]}')
+
+largestEleInList()
+Enter the No of elements in a list: 12
+Enter a Element: 10
+Enter a Element: 98
+Enter a Element: 12
+Enter a Element: 14
+Enter a Element: 15
+Enter a Element: 65
+Enter a Element: 76
+Enter a Element: 87
+Enter a Element: 34
+Enter a Element: 56
+Enter a Element: 87
+Enter a Element: 34
+The Largest Element in [10, 98, 12, 14, 15, 65, 76, 87, 34, 56, 87, 34] is 98
+
+
+5.Write a Python Program to find second largest number in the list ?
+Ans:
+def secondLargestEleInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    print(f'The Second Largest Element in {in_list} is {sorted(in_list, reverse=True)[1]}')
+
+secondLargestEleInList()
+Enter the No of elements in a list: 5
+Enter a Element: 12
+Enter a Element: 13
+Enter a Element: 14
+Enter a Element: 15
+Enter a Element: 16
+The Second Largest Element in [12, 13, 14, 15, 16] is 15
+
+
+6.Write a Python Program to find N largest elements in the list ?
+Ans:
+def nLargestEleInList(k):
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    print(f'The {k} Largest Element in {in_list} is {sorted(in_list, reverse=True)[0:k]}')
+
+nLargestEleInList(4)
+Enter the No of elements in a list: 10
+Enter a Element: 1
+Enter a Element: 2
+Enter a Element: 3
+Enter a Element: 4
+Enter a Element: 5
+Enter a Element: 6
+Enter a Element: 7
+Enter a Element: 8
+Enter a Element: 9
+Enter a Element: 10
+The 4 Largest Element in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] is [10, 9, 8, 7]
+
+
+7.Write a Python Program to find even numbers in the list ?
+Ans:
+def evenNoInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    even_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    for ele in in_list:
+        if ele%2 == 0:
+            even_list.append(ele)
+    print(f'The Even Elements in {in_list} are {even_list}')
+
+evenNoInList()
+Enter the No of elements in a list: 6
+Enter a Element: 1
+Enter a Element: 2
+Enter a Element: 3
+Enter a Element: 4
+Enter a Element: 5
+Enter a Element: 6
+The Even Elements in [1, 2, 3, 4, 5, 6] are [2, 4, 6]
+
+
+8.Write a Python Program to find odd numbers in the list ?
+Ans:
+def oddNoInList():
+    in_ele = int(input('Enter the No of elements in a list: '))
+    in_list = []
+    odd_list = []
+    for ele in range(in_ele):
+        in_list.append(int(input('Enter a Element: ')))
+    for ele in in_list:
+        if ele%2 != 0:
+            odd_list.append(ele)
+    print(f'The Even Elements in {in_list} are {odd_list}')
+
+oddNoInList()
+Enter the No of elements in a list: 6
+Enter a Element: 1
+Enter a Element: 2
+Enter a Element: 3
+Enter a Element: 4
+Enter a Element: 5
+Enter a Element: 6
+The Even Elements in [1, 2, 3, 4, 5, 6] are [1, 3, 5]
+
+
+9.Write a Python Program to remove empty list from list ?
+Ans:
+def checkEmptyList():
+    in_list = eval(input('Enter all elements of the list: '))
+    if [] in in_list:
+        print(f'There is an Empty list in {in_list} at Position {in_list.index([])}')
+        in_list.remove([])
+        print(f'The List after removing [] is {in_list}')
+    else:
+        print(f'There is no [] List in the list {in_list}')
+        
+checkEmptyList()
+Enter all elements of the list: [1,2,3,4,5,[],6,7,8,9,0]
+There is an Empty list in [1, 2, 3, 4, 5, [], 6, 7, 8, 9, 0] at Position 5
+The List after removing [] is [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+
+10.Write a Python Program to Cloning or Copying a list ?
+Ans:
+import copy
+
+def cloneList():
+    in_list = eval(input('Enter a list'))
+    print(in_list, id(in_list))
+    cloned_list = in_list.copy()
+    print(cloned_list, id(cloned_list))
+
+cloneList()
+Enter a list[1,2,3,4,5,6,7,8,9,0]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 1804715913280
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 1804715963072
+
+
+11.Write a Python Program to count occurences of an element in a list ?
+Ans:
+def checkOccurence():
+    in_list = eval(input('Enter the elements of the list: '))
+    in_num = eval(input('Enter the element to find: '))
+    count = 0
+    if in_num in in_list:
+        for ele in in_list:
+            if ele == in_num:
+                count = count+1
+    print(f'There are {count} occurences of {in_num} in {in_list}')
+    
+checkOccurence()
+Enter the elements of the list: [1,2,3,1,2,3,1,2,3,4,5,6,4,5,6]
+Enter the element to find: 6
+There are 2 occurences of 6 in [1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 5, 6, 4, 5, 6]
+
+
+
+
+
+
