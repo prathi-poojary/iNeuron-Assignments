@@ -1,0 +1,62 @@
+1. Write a Python Program to find sum of Array ?
+Ans:
+def sumOfArray():
+    in_arr = eval(input("Enter the Array: "))
+    print(f'The sum of {in_arr} is {sum(in_arr)}')
+
+sumOfArray()
+Enter the Array: [1,2,3,4,5]
+[1, 2, 3, 4, 5] <class 'list'>
+The sum of [1, 2, 3, 4, 5] is 15
+
+
+2. Write a Python Program to find Largest element in an Array ?
+Ans:
+def largestElement():
+    in_arr = eval(input("Enter the Array: "))
+    print(f"The Largest Element in {in_arr} is {sorted(in_arr, reverse=True)[0]}")
+    
+largestElement()
+Enter the Array: [1,2,3,4,5]
+The Largest Element in [1, 2, 3, 4, 5] is 5
+
+
+3. Write a Python Program for array rotation ?
+Ans:
+def reverseOfArray():
+    in_arr = eval(input("Enter the Array: "))
+    print(f"The Reverse of Array {in_arr} is {in_arr[::-1]}")
+    
+reverseOfArray()
+Enter the Array: [12,16,11,13,30]
+The Reverse of Array [12, 16, 11, 13, 30] is [30, 13, 11, 16, 12]
+
+
+4. Write a Python Program to Split the array and add the first part to the end ?
+Ans:
+def sumOfSplits():
+    in_arr = eval(input("Enter the Array: "))
+    print(f"The Sum of First and Last Elements of Array {in_arr} is {in_arr[0]+in_arr[-1]}")
+    
+sumOfSplits()
+Enter the Array: [10,13,14,9,18]
+The Sum of First and Last Elements of Array [10, 13, 14, 9, 18] is 28
+
+
+5. Write a Python Program to check if given array is Monotonic ?
+Ans:
+def checkMonotonic():
+    in_arr = eval(input("Enter the Array: "))
+    if(all(in_arr[i]<=in_arr[i+1] for i in range(len(in_arr)-1)) or all(in_arr[i]>=in_arr[i+1] for i in range(len(in_arr)-1))):
+        print(f'Array {in_arr} is Monotonic')
+    else:
+        print(f'Array {in_arr} is Not Monotonic')
+
+checkMonotonic()
+checkMonotonic()
+Enter the Array: [1,2,3,4,5]
+Array [1, 2, 3, 4, 5] is Monotonic
+Enter the Array: 4,2,4,5,6,1
+Array (4, 2, 4, 5, 6, 1) is Not Monotonic
+
+
