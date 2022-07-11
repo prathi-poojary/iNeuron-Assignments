@@ -1,0 +1,103 @@
+1.Write a Python program to print 'Hello Python' ?
+Ans:
+print('Hello Python')
+Hello Python
+
+
+2.Write a Python program to do arithmetic operations addition and division ?
+Ans:
+import operator
+
+ops = { "+": operator.add, "/":operator.truediv } 
+
+print('Select a Arithmetic Operation: \
+        \n1.Addition(+)\
+        \n2.Division(/)\
+        \n3.Stop(0)\n')
+   
+while True:
+    operator = input('Enter a arithmetic operation -> ')
+    if operator == '0':
+        print("Program Stopped successfully")
+        break
+    elif operator not in ['+','/']:
+        print("Please enter a valid operator")
+    else:
+        num_1 = int(input('\nEnter 1st Number: '))
+        num_2 = int(input('Enter 2nd Number: '))
+        print('{}{}{}={}\n'.format(num_1, operator, num_2, ops[operator](num_1,num_2)))
+Select a Arithmetic Operation:         
+1.Addition(+)                
+2.Division(/)        
+3.Stop(0)
+
+Enter a arithmetic operation -> +
+
+Enter 1st Number: 10
+Enter 2nd Number: 30
+10+30=40
+
+Enter a arithmetic operation -> -
+
+Enter 1st Number: 10
+Enter 2nd Number: 20
+10-20=-10
+
+Enter a arithmetic operation -> 0
+Program Stopped successfully
+
+
+3.Write a Python program to find the area of a triangle ?
+Ans:
+height = int(input('Enter height of triangle: '))
+base = int(input('Enter base of triangle: '))
+
+def areaOfTriangle(height, base):
+    print('\nArea of triangle ->', 0.5*height*base)
+
+areaOfTriangle(height,base)
+Enter height of triangle: 100
+Enter base of triangle: 50
+
+Area of triangle -> 2500.0
+
+
+4.Write a Python program to swap two variables ?
+Ans:
+num_1 = int(input("Enter First Number: "))
+num_2 = int(input("Enter Second Number: "))
+
+def swapNumbers(a,b):
+    temp = a
+    a = b
+    b = temp
+    return a,b
+
+print('Before swapping -> ',num_1, num_2)
+num_1, num_2 = swapNumbers(num_1, num_2)
+print('After swapping -> ',num_1,num_2)
+
+   
+Enter First Number: 100
+Enter Second Number: 300
+Before swapping ->  100 300
+After swapping ->  300 100
+
+
+5.Write a Python program to generate a random number ?
+Ans:
+from random import randint
+
+def generateRandomNumber(start=0, end=100000):
+    print('Random number -> ',randint(start,end))
+
+# Generating random numbers without arguments    
+generateRandomNumber()
+
+# Generating random numbers with arguments    
+generateRandomNumber(0,100)
+Random number ->  75610
+Random number ->  34
+
+
+
