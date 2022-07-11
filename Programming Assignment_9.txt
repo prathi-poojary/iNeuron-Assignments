@@ -1,0 +1,130 @@
+1.Write a Python Program to check if the given number is a Disarium Number ?
+Ans:
+def checkDisariumNumber():
+    in_num = input('Enter a Number: ')
+    sum = 0
+    for item in range(len(in_num)):
+        sum = sum + int(in_num[item])**(item+1)
+    if sum == int(in_num):
+        print(f'{in_num} is a Disarium Number')
+    else:
+        print(f'{in_num} is a Not Disarium Number') 
+
+checkDisariumNumber()
+checkDisariumNumber()
+Enter a Number: 135
+135 is a Disarium Number
+Enter a Number: 100
+100 is a Not Disarium Number
+
+
+2.Write a Python Program to print all Disarium numbers between 1 to 100 ?
+Ans:
+def printDisariumNumbers(start=0,end=100):
+    output_num = []
+    for number in range(start,end+1):
+        sum = 0
+        for item in range(len(str(number))):
+            sum = sum + int(str(number)[item])**(item+1)
+        if sum == number:
+            output_num.append(number)
+    return output_num
+            
+        
+printDisariumNumbers(1,1000)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 89, 135, 175, 518, 598]
+
+
+3.Write a Python Program to check if the given number is Happy Number ?
+Ans:
+def checkHappyNumber():
+    in_num = input('Enter a Number: ')
+    in_num_duplicate = in_num
+    trackNumber = set()   
+    while True:
+        if in_num != '1' and str(in_num) not in trackNumber:
+            trackNumber.add(in_num)
+            sum = 0
+            for ele in range(len((in_num))):
+                sum = sum + int(in_num[ele])**2
+            in_num = str(sum)
+        elif str(in_num) in trackNumber:
+            print(f'{in_num_duplicate} is not a Happy Number')
+            break
+        else:
+            print(f'{in_num_duplicate} is a Happy Number')
+            break
+
+checkHappyNumber()
+checkHappyNumber()
+Enter a Number: 7
+7 is a Happy Number
+Enter a Number: 10
+10 is a Happy Number
+
+
+4.Write a Python Program to print all Happy numbers between 1 and 100 ?
+Ans:
+def checkHappyNumber(start=0,end=100):
+    happyNumbersList = []
+    for in_num in range(start,end+1):
+        in_num = str(in_num)
+        inum_holder = in_num
+        trackNumber = set()   
+        while True:
+            if in_num != '1' and str(in_num) not in trackNumber:
+                trackNumber.add(in_num)
+                sum = 0
+                for ele in range(len((in_num))):
+                    sum = sum + int(in_num[ele])**2
+                in_num = str(sum)
+            elif str(in_num) in trackNumber:
+                break
+            else:
+                happyNumbersList.append(int(inum_holder))
+                break
+    print(f'The Happy Numbers between {start} and {end} are {happyNumbersList}')
+    
+checkHappyNumber(0,100)
+The Happy Numbers between 0 and 100 are [1, 7, 10, 13, 19, 23, 28, 31, 32, 44, 49, 68, 70, 79, 82, 86, 91, 94, 97, 100]
+
+
+5.Write a Python Program to determine whether the given number is a Harshad Number ?
+Ans:
+def checkHarshadNumber():
+    in_num = input('Enter a Number: ')
+    sum = 0
+    for item in range(len(in_num)):
+        sum = sum + int(in_num[item])
+    if int(in_num)%sum == 0:
+        print(f'{in_num} is a Harshad Number')
+    else:
+        print(f'{in_num} is a Not Harshad Number')
+        
+checkHarshadNumber()
+checkHarshadNumber()
+Enter a Number: 6804
+6804 is a Harshad Number
+Enter a Number: 20
+20 is a Harshad Number
+
+
+6.Write a Python Program to print all pronic numbers between 1 and 100 ?
+Ans:
+def printPronicNumbers(start=0,end=100):
+    outputList = []
+    for ele in range(start,end+1):
+        outputList.append((ele)*(ele+1))
+    print(outputList)
+                   
+printPronicNumbers()
+[0, 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380, 420, 462, 506, 552, 600, 650, 702, 756, 812, 870, 930, 992, 1056, 1122, 1190, 1260, 1332, 1406, 1482, 1560, 1640, 1722, 1806, 1892, 1980, 2070, 2162, 2256, 2352, 2450, 2550, 2652, 2756, 2862, 2970, 3080, 3192, 3306, 3422, 3540, 3660, 3782, 3906, 4032, 4160, 4290, 4422, 4556, 4692, 4830, 4970, 5112, 5256, 5402, 5550, 5700, 5852, 6006, 6162, 6320, 6480, 6642, 6806, 6972, 7140, 7310, 7482, 7656, 7832, 8010, 8190, 8372, 8556, 8742, 8930, 9120, 9312, 9506, 9702, 9900, 10100]
+
+
+
+
+
+
+
+
+
