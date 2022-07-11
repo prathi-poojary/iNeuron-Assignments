@@ -1,0 +1,134 @@
+1. Write a Python Program to find LCM ?
+Ans:
+def findTheLcm(x_term,y_term):
+    if x_term > y_term:
+        greater = x_term
+    else:
+        greater = x_term
+    while True:
+        if((greater%x_term == 0) and (greater%y_term == 0)):
+            lcm = greater
+            break
+        else:
+            greater +=1
+    print(f'The LCM of {x_term},{y_term} is {lcm}')
+
+findTheLcm(3,6)
+findTheLcm(5,2)
+findTheLcm(5,100)
+The Lcm of 3,6 is 6
+The Lcm of 5,2 is 10
+The Lcm of 5,100 is 100
+
+
+2. Write a Python Program to find HCF ?
+Ans:
+def findTheHcf(x_term,y_term):
+    if x_term>y_term:
+        smaller = y_term
+    else:
+        smaller = x_term
+    for ele in range(1,smaller+1):
+        if((x_term%ele == 0) and (y_term%ele == 0)):
+            hcf = ele
+    print(f'The HCF of {x_term},{y_term} is {hcf}')
+
+findTheHcf(6,12)
+findTheHcf(2,3)
+findTheHcf(10,23)
+The HCF of 6,12 is 6
+The HCF of 2,3 is 1
+The HCF of 10,23 is 1
+
+
+3. Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal ?
+Ans:
+def DecimalToOther():
+    num = int(input('Enter a Number: '))
+    print(f'Binary Number -> {bin(num)}')
+    print(f'Octal Number -> {oct(num)}')    
+    print(f'Hexadecimal Number -> {hex(num)}')    
+
+DecimalToOther()
+Enter a Number: 55252555
+Binary Number -> 0b11010010110001011001001011
+Octal Number -> 0o322613113
+Hexadecimal Number -> 0x34b164b
+
+
+4. Write a Python Program to Find the ASCII value of a Character ?
+Ans:
+def charToAscii():
+    char = input('Enter a Character: ')
+    if len(char) > 1:
+        print('Please Enter a Single Character')
+    else:
+        print(f'Ascii Character of {char} is {ord(char)}')
+
+charToAscii()
+Enter a Character: @
+Ascii Character of @ is 64
+
+
+5. Write a Python Program to Make a Simple Calculator with 4 Basic Mathematical operations ?
+Ans:
+import operator
+
+ops = { "+": operator.add, "-": operator.sub, "*":operator.mul, "/":operator.truediv } 
+
+print('Select a Arithmetic Operation: \
+        \n1.Addition(+)\
+        \n2.Division(-)\
+        \n3.Multiplication(*)\
+        \n4.Division(/)\
+        \n5.Stop(0)\n')
+   
+
+while True:
+    operator = input('Enter a arithmetic operation -> ')
+    if operator == '0':
+        print("Program Stopped successfully")
+        break
+    elif operator not in ['+','-','*','/']:
+        print("Please enter a valid operator")
+    else:
+        num_1 = int(input('\nEnter 1st Number: '))
+        num_2 = int(input('Enter 2nd Number: '))
+        print(f'{num_1}{operator}{num_2}={ops[operator](num_1,num_2)}\n')
+Select a Arithmetic Operation:         
+1.Addition(+)        
+2.Division(-)        
+3.Multiplication(*)        
+4.Division(/)        
+5.Stop(0)
+
+Enter a arithmetic operation -> +
+
+Enter 1st Number: 10
+Enter 2nd Number: 20
+10+20=30
+
+Enter a arithmetic operation -> -
+
+Enter 1st Number: 10
+Enter 2nd Number: 20
+10-20=-10
+
+Enter a arithmetic operation -> *
+
+Enter 1st Number: 10
+Enter 2nd Number: 20
+10*20=200
+
+Enter a arithmetic operation -> /
+
+Enter 1st Number: 10
+Enter 2nd Number: 20
+10/20=0.5
+
+Enter a arithmetic operation -> 0
+Program Stopped successfully
+
+
+
+
