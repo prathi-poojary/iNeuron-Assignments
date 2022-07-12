@@ -1,0 +1,66 @@
+
+Assignment 11 Solutions
+1. Given X be a discrete random variable with the following PMF
+image.png
+
+Find the range RX of the random variable X.
+Find P(X ≤ 0.5)
+Find P(0.25<X<0.75)
+P(X = 0.2|X<0.6)
+ 
+2.Two equal and fair dice are rolled, and we observed two numbers X and Y.
+Find RX, RY, and the PMFs of X and Y.
+Find P(X = 2,Y = 6).
+Find P(X>3|Y = 2).
+If Z = X + Y. Find the range and PMF of Z.
+Find P(X = 4|Z = 8).
+ 
+3. In an exam, there were 20 multiple-choice questions. Each question had 44 possible options. A student knew the answer to 10 questions, but the other 10 questions were unknown to him, and he chose answers randomly. If the student X's score is equal to the total number of correct answers, then find out the PMF of X. What is P(X>15)?
+ 
+4. The number of students arriving at a college between a time interval is a Poisson random variable. On average, 10 students arrive per hour. Let Y be the number of students arriving from 10 am to 11:30 am. What is P(10<Y≤15)?
+ 
+5.Two independent random variables, X and Y,are given such that X~Poisson(α) and Y~Poisson(β). State a new random variable as Z = X + Y. Find out the PMF of Z.
+ 
+6. There is a discrete random variable X with the pmf.
+image.png If we define a new random variable Y = (X + 1)2 then
+
+Find the range of Y.
+Find the pmf of Y.
+2.Assuming X is a continuous random variable with PDF
+image-2.png
+
+Find EX and Var(X).
+Find P(X ≥ 1/2).
+
+If X is a continuous random variable with pdf image-3.png
+
+If X~Uniform and Y = sin(X), then find fY(y).
+If X is a random variable with CDF image-4.png
+What kind of random variable is X: discrete, continuous, or mixed?
+Find the PDF of X, fX(x).
+Find E(eX).
+Find P(X = 0|X≤0.5).
+ 
+5. There are two random variables X and Y with joint PMF given in Table below
+Find P(X≤2, Y≤4).
+Find the marginal PMFs of X and Y.
+Find P(Y = 2|X = 1).
+Are X and Y independent?
+image.png
+
+ 
+6.A box containing 40 white shirts and 60 black shirts. If we choose 10 shirts (without replacement) at random, find the joint PMF of X and Y, where X is the number of white shirts and Y is the number of black shirts.
+ 
+7.If A and B are two jointly continuous random variables with joint PDF
+image.png
+
+Find fX(a) and fY(b).
+Are A and B independent of each other?
+Find the conditional PDF of A given B = b, fA|B(a|b).
+Find E[A|B = b], for 0 ≤ y ≤ 1.
+Find Var(A|B = b), for 0 ≤ y ≤ 1.
+ 
+8.There are 100 men on a ship. If Xi is the ith man's weight on the ship and Xi's are independent and identically distributed and EXi = μ = 170 and σXi = σ = 30. Find the probability that the men's total weight on the ship exceeds 18,000.
+ 
+9.Let X1, X2, ……, X25 are independent and identically distributed. And have the following PMF. If Y = X1 + X2 + … + Xn, estimate P(4 ≤ Y ≤ 6) using central limit theorem.
+ 
